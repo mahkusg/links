@@ -41,7 +41,7 @@
       z-index: -2;
       background: url("bg.jpg") center / cover no-repeat;
       transform: scale(1.03);
-      filter: saturate(1.05) contrast(1.05);
+      filter: saturate(1.08) contrast(1.04) brightness(1.08);
     }
 
     body::after {
@@ -49,12 +49,12 @@
       position: fixed;
       inset: 0;
       z-index: -1;
-      /* Warm sunset wash — amber/copper, not pink */
+      /* Lighter warm sunset wash — keep readable but brighter */
       background:
-        linear-gradient(180deg, rgba(18, 12, 8, 0.45) 0%, rgba(12, 14, 18, 0.62) 42%, rgba(8, 10, 14, 0.86) 100%),
-        radial-gradient(900px 520px at 50% 0%, rgba(255, 140, 60, 0.18), transparent 58%),
-        radial-gradient(700px 420px at 20% 90%, rgba(255, 100, 40, 0.10), transparent 55%),
-        radial-gradient(600px 380px at 90% 80%, rgba(70, 110, 160, 0.12), transparent 50%);
+        linear-gradient(180deg, rgba(18, 12, 8, 0.22) 0%, rgba(12, 14, 18, 0.38) 40%, rgba(8, 10, 14, 0.72) 100%),
+        radial-gradient(900px 520px at 50% 0%, rgba(255, 150, 70, 0.16), transparent 58%),
+        radial-gradient(700px 420px at 20% 90%, rgba(255, 110, 50, 0.08), transparent 55%),
+        radial-gradient(600px 380px at 90% 80%, rgba(70, 110, 160, 0.08), transparent 50%);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -73,7 +73,7 @@
     .panel {
       padding: 1.35rem 1.15rem 1.25rem;
       border-radius: 24px;
-      background: rgba(20, 16, 14, 0.58);
+      background: rgba(20, 16, 14, 0.48);
       border: 1px solid rgba(255, 210, 160, 0.14);
       box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.45),
