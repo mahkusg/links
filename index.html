@@ -13,8 +13,8 @@
     :root {
       color-scheme: dark;
       --text: #f5f7ff;
-      --muted: #b7c0d8;
-      --accent: #6ec8ff;
+      --muted: #c9c2b6;
+      --accent: #f0a35a;
     }
 
     * { box-sizing: border-box; }
@@ -31,7 +31,7 @@
       position: relative;
       isolation: isolate;
       min-height: 100vh;
-      background: #070b14;
+      background: #120e0b;
     }
 
     body::before {
@@ -39,9 +39,9 @@
       position: fixed;
       inset: 0;
       z-index: -2;
-      background:
-        url("bg.png") center / cover no-repeat;
-      transform: scale(1.02);
+      background: url("bg.jpg") center / cover no-repeat;
+      transform: scale(1.03);
+      filter: saturate(1.05) contrast(1.05);
     }
 
     body::after {
@@ -49,11 +49,12 @@
       position: fixed;
       inset: 0;
       z-index: -1;
+      /* Warm sunset wash — amber/copper, not pink */
       background:
-        linear-gradient(180deg, rgba(7, 11, 20, 0.55) 0%, rgba(7, 11, 20, 0.72) 45%, rgba(7, 11, 20, 0.88) 100%),
-        radial-gradient(900px 500px at 50% -10%, rgba(110, 200, 255, 0.22), transparent 60%),
-        radial-gradient(700px 420px at 85% 95%, rgba(167, 100, 255, 0.18), transparent 55%);
-      backdrop-filter: blur(0px);
+        linear-gradient(180deg, rgba(18, 12, 8, 0.45) 0%, rgba(12, 14, 18, 0.62) 42%, rgba(8, 10, 14, 0.86) 100%),
+        radial-gradient(900px 520px at 50% 0%, rgba(255, 140, 60, 0.18), transparent 58%),
+        radial-gradient(700px 420px at 20% 90%, rgba(255, 100, 40, 0.10), transparent 55%),
+        radial-gradient(600px 380px at 90% 80%, rgba(70, 110, 160, 0.12), transparent 50%);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -72,13 +73,13 @@
     .panel {
       padding: 1.35rem 1.15rem 1.25rem;
       border-radius: 24px;
-      background: rgba(16, 22, 36, 0.55);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(20, 16, 14, 0.58);
+      border: 1px solid rgba(255, 210, 160, 0.14);
       box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.45),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(18px) saturate(140%);
-      -webkit-backdrop-filter: blur(18px) saturate(140%);
+        inset 0 1px 0 rgba(255, 220, 180, 0.08);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
     }
 
     header {
@@ -94,7 +95,7 @@
       overflow: hidden;
       border: 2px solid rgba(255, 255, 255, 0.18);
       box-shadow:
-        0 0 0 6px rgba(110, 200, 255, 0.12),
+        0 0 0 6px rgba(240, 163, 90, 0.16),
         0 16px 40px rgba(0, 0, 0, 0.45);
       background: #161d2e;
     }
@@ -141,19 +142,19 @@
     }
 
     a.link:hover {
-      background: rgba(110, 200, 255, 0.12);
-      border-color: rgba(110, 200, 255, 0.45);
+      background: rgba(240, 163, 90, 0.12);
+      border-color: rgba(240, 163, 90, 0.42);
       transform: translateY(-2px);
       box-shadow:
         0 10px 28px rgba(0, 0, 0, 0.35),
-        0 0 0 3px rgba(110, 200, 255, 0.18);
+        0 0 0 3px rgba(240, 163, 90, 0.16);
     }
 
     a.link:active { transform: translateY(0); }
 
     a.link:focus-visible {
       outline: none;
-      box-shadow: 0 0 0 3px rgba(110, 200, 255, 0.35);
+      box-shadow: 0 0 0 3px rgba(240, 163, 90, 0.35);
     }
 
     .emoji {
@@ -184,7 +185,7 @@
     footer {
       margin-top: 1.35rem;
       text-align: center;
-      color: rgba(183, 192, 216, 0.85);
+      color: rgba(201, 194, 182, 0.85);
       font-size: 0.75rem;
     }
   </style>
